@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- NAVBAR -->
+    <nav>
+        <div class="heading">
+            <h1>GAME DISK 4</h1>
+        </div>
+        <div class="options">
+            <div class="option dm"> <!--dark mode toggle-->
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider round"></span>
+                </label> 
+                <p>Dark Mode</p>
+            </div>
+            <div class="option se">  <!--Sound effects toggle-->
+                <label class="switch">
+                    <input type="checkbox" id="soundToggle">
+                    <span class="slider round"></span>
+                </label> 
+                <p>Sound Effects</p>
+            </div>
+            <div id="about" class="option">  <!--aout section-->
+                <button id="about-button">?</button>
+                <p>About</p>
+            </div>
+        </div>
+    </nav>
+
+<!-- ABOUT POP UP -->
+    <div id="about-popup">
+        <button id="cross">X</button>
+        <div class="about-page">
+            <p>
+                Connect Four is a two-player strategy game where Yellow and Red take turns dropping discs into a 7x6 grid. The goal is to be the first to connect four discs in a row—vertically, horizontally, or diagonally. After each move, players block one unfilled column to restrict the opponent. Each player has 180 seconds of total turn time; running out means defeat. Two power-ups are available once per player: <strong>ET (Extra Time)</strong> adds +15 seconds, and <strong>CF (Color Flip)</strong> allows flipping one opponent disc to your color. First to connect four or survive on time wins!
+            </p>
+        </div>
+    </div>
+
+<!-- LEADERBOARD -->
+    <div id="leaderboard">
+        <h1>Leaderboard</h1>
+        <ul id="ranking"></ul>
+    </div>
+    <div id="game-body">
+        <div class="game" id="arena">
+            <div id="arrows-top"></div>
+            <div id="grid-container"></div>
+            <div id="arrows-bottom"></div>
+        </div>
+        <div class="alert-container">
+            <div id="alerts">
+                <!-- Yellow's options -->
+                <div class="left flexrow">
+                    <div id="powerUpsY">
+                        <button class="alert y" id="etY">Extra Time</button>
+                        <button class="alert y" id="cfY">Color FLip</button>
+                    </div>
+                    <div class="alert y" id="yyt">Your Turn</div>
+                    <div class="alert y" id="ybc">Block A Column</div>
+                    <div class="timer y" id="ytimer">180</div>
+                </div>
+
+                <!-- Red's options -->
+                <div class="right flexrow">
+                    <div id="powerUpsR">
+                        <button class="alert r" id="etR">Extra Time</button>
+                        <button class="alert r" id="cfR">Color FLip</button>
+                    </div>
+                    <div class="alert r" id="ryt">Your Turn</div>
+                    <div class="alert r" id="rbc">Block A Column</div>
+                    <div class="timer r" id="rtimer">180</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+<script type="module" src="./game.js"></script>
+</html>

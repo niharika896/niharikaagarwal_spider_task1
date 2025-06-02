@@ -1,0 +1,145 @@
+body {
+  background-color: #fd5c48;
+  overflow: hidden;
+}
+
+/* formatting all images */
+
+#meter {
+  position: relative;
+  display: block;
+  margin: auto;
+  max-width: min-content;
+  height: 80vh;
+}
+
+#needle {
+  z-index: 100;
+  display: block;
+  position: relative;
+  margin: auto;
+  transform: translate(11vw, -15vh);
+  height: 5vh;
+  max-height: min-content;
+}
+
+#pong {
+  position: relative;
+  height: 5vh;
+  display: block;
+  margin: auto;
+  transform: translate(0, -20vh);
+}
+
+#hammerR {
+  position: absolute;
+  right: 0;
+  bottom: 35vh;
+  width: 30vw;
+  transform: rotate(90deg);
+}
+#hammerL {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 35vh;
+  width: 30vw;
+  transform: rotate(90deg);
+}
+
+/* Each Turn QuarterCircle */
+.turn {
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2vh;
+  box-sizing: border-box;
+  color: black;
+  font-weight: bold;
+  height: 15vh;
+  width: 15vh;
+  text-align: left;
+  bottom: 0;
+  font-size: 2.5vh;
+  z-index: 10;
+  overflow: hidden;
+}
+
+#p1 {
+  background-color: #00b8a9;
+  transform: translate(2vh, 2vh);
+  border-radius: 0 100% 0 0;
+  left: 0;
+}
+
+#p2 {
+  background-color: #b8ff00;
+  border-radius: 100% 0 0 0;
+  right: 0;
+  text-align: right;
+}
+
+/* end page */
+
+.win {
+  display: block;
+  margin: auto;
+  max-width: fit-content;
+  background: linear-gradient(135deg, #00b8a9, #b8ff00);
+  color: black;
+  font-weight: bold;
+  font-size: 3vh;
+  text-align: center;
+  padding: 5vh 5vw;
+  border-radius: 2vh;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+.btn {
+  margin-top: 2vh;
+  background: linear-gradient(135deg, #00b8a9, #b8ff00);
+  font-weight: bold;
+  font-size: 2vh;
+  text-align: center;
+  padding: 2vh;
+  border-radius: 2vh;
+  box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  animation: popIn 0.5s ease-out forwards;
+}
+
+.btns {
+  display: block;
+  margin: auto;
+}
+
+#endpage {
+  display: none;
+}
+
+.endchar {
+  flex-direction: column;
+  margin-top: 50vh;
+  transform: translate(0, -25vh);
+}
+
+/* Responsiveness */
+
+@media screen and (min-width: 1100px) {
+  #needle {
+    transform: translate(5vw, -15vh);
+  }
+
+  #hammerR {
+    width: 30vh;
+  }
+
+  #hammerL {
+    width: 30vh;
+  }
+}
